@@ -44,7 +44,7 @@ function App() {
                         <div className="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2" style={{paddingBottom: 15}}>
                             <div className="avatar">
                                 <animated.img
-                                    src={iulia} alt="" className="avatarcv"
+                                    src={require(iulia)} alt="" className="avatarcv"
                                     onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
                                     onMouseLeave={() => set({xys: [0, 0, 1]})}
                                     style={{transform: props.xys.interpolate(trans)}}
