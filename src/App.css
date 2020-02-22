@@ -347,6 +347,10 @@
 
 
 @media screen and (max-width: 768px) {
+    .cv-frame {
+        background-image: unset;
+    }
+
     .description-field {
         padding: 1% 1%;
         max-width: 94%;
