@@ -54,7 +54,7 @@ function App() {
                         <div className="name col-8 col-md-8 col-lg-6 col-xl-6">
                             <div className="title-front ">
                                 <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                                    Iulia Ghieș
+                                    Iulia Ghies
                                 </SplitText>
                                 <div className="boarder-right slow" />
                                 <div className="subtitle">
@@ -168,9 +168,9 @@ function App() {
                                 </div>
                                 <div className="col-4" style={{
                                     paddingLeft: 'unset',
-                                    fontFamily: 'Courier',
+                                    fontFamily: 'Dancing Script',
                                     fontWeight: 'bold',
-                                    fontSize: 80 + '%',
+                                    fontSize: 100 + '%',
                                     paddingRight: 'unset'
                                 }}>
                                     September 2018
@@ -189,9 +189,9 @@ function App() {
                                 </div>
                                 <div className="col-4" style={{
                                     paddingLeft: 'unset',
-                                    fontFamily: 'Courier',
+                                    fontFamily: 'Dancing Script',
                                     fontWeight: 'bold',
-                                    fontSize: 80 + '%',
+                                    fontSize: 100 + '%',
                                     paddingRight: 'unset'
                                 }}>
                                     09.2015 – 05.2018
@@ -210,9 +210,9 @@ function App() {
                                 </div>
                                 <div className="col-4" style={{
                                     paddingLeft: 'unset',
-                                    fontFamily: 'Courier',
+                                    fontFamily: 'Dancing Script',
                                     fontWeight: 'bold',
-                                    fontSize: 80 + '%',
+                                    fontSize: 100 + '%',
                                     paddingRight: 'unset'
                                 }}>
                                     09.2010 – 05.2015
@@ -231,9 +231,9 @@ function App() {
                                 </div>
                                 <div className="col-4" style={{
                                     paddingLeft: 'unset',
-                                    fontFamily: 'Courier',
+                                    fontFamily: 'Dancing Script',
                                     fontWeight: 'bold',
-                                    fontSize: 80 + '%',
+                                    fontSize: 100 + '%',
                                     paddingRight: 'unset'
                                 }}>
                                     09.2006 – 05.2010

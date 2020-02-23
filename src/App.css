@@ -1,10 +1,12 @@
 :root {
     --color-surface: #FF5B94;
     --color-solid: #8441A4;
+    --font-title: Fredoka One;
 }
 
 .App {
     padding: 2% 10%;
+    font-family: Inconsolata;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -20,7 +22,7 @@
     font-size: 300%;
     display: inline-block;
     letter-spacing: 25px;
-    font-family: Comic Sans MS, cursive;
+    font-family: Luckiest Guy;
 }
 
 .right-bar {
@@ -41,7 +43,7 @@
     letter-spacing: 10px;
     font-size: 50%;
     text-align: end;
-    font-family: Comic Sans MS, cursive;
+    font-family: Luckiest Guy;
 }
 
 .avatar {
@@ -98,7 +100,7 @@
 }
 
 .category-title {
-    font-family: "Courier New", serif;
+    font-family: Trade Winds;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -149,9 +151,10 @@
 
 .left-title {
     text-align: left;
-    font-family: "Courier New", serif;
+    font-family: var(--font-title);
     text-transform: uppercase;
-    font-weight: bold;
+    /*font-weight: bold;*/
+    font-size: 96%;
     padding-top: 4%;
 }
 
@@ -165,6 +168,8 @@
 
 .component-title {
     border-right: 2px solid var(--color-solid);
+    font-family: var(--font-title);
+    font-weight: 100;
 }
 
 .component-title:last-child {
@@ -276,6 +281,7 @@
     padding: 2px;
     border-radius: 15px;
     margin-bottom: 5px;
+    /*font-family: Indie Flower;*/
     font-size: 14px;
     color: #FFF;
     font-weight: bold;
