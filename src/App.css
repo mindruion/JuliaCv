@@ -61,6 +61,10 @@
     animation: none;
 }
 
+.changeColor {
+    display: noen;
+}
+
 .pulse-button {
     animation: pulse 1.5s infinite;
     position: fixed;
@@ -74,7 +78,7 @@
     border: none;
     box-shadow: 0 0 0 0 #736c70;
     border-radius: 50%;
-    background-color: var(--color-surface);
+    background-image: linear-gradient(90deg, var(--color-surface), var(--color-solid));
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -353,6 +357,16 @@
 
 
 @media screen and (max-width: 768px) {
+    .changeColor {
+        top: 10%;
+        right: 2%;
+        height: 5%;
+        width: 5%;
+        background-image: linear-gradient(90deg, var(--color-surface), var(--color-solid));
+        position: fixed;
+        border-radius: 50%;
+    }
+
     .cv-frame {
         background-image: unset;
     }
@@ -371,6 +385,7 @@
         align-self: center;
         height: 100%;
     }
+
     .pulse-button {
         display: none;
     }
@@ -408,4 +423,5 @@
         padding-top: 5%;
         height: 100%;
     }
+
 }

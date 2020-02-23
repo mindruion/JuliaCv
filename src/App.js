@@ -30,8 +30,27 @@ const charPoses2 = {
     }
 };
 
+
 const calc = (x, y) => [-(y - window.innerHeight / 4) / 20, (x - window.innerWidth / 4) / 20, 1.1];
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
+function changeTheme() {
+    let colors = [{first: '#8E0E00', second: '#1F1C18'},
+        {first: '#FF5B94', second: '#8441A4'},
+        {first: '#D38312', second: '#A83279'},
+        {first: '#ff4e50', second: '#f9d423'},
+        {first: '#add100', second: '#7b920a'},
+        {first: '#200122', second: '#6f0000'}];
+
+    let item = colors[Math.floor(Math.random() * colors.length)];
+
+    let root = document.documentElement;
+    if (item.first == root.style.getPropertyValue('--color-surface')) {
+        item = colors[Math.floor(Math.random() * colors.length)];
+    }
+    root.style.setProperty('--color-surface', item.first);
+    root.style.setProperty('--color-solid', item.second);
+}
 
 
 function App() {
@@ -257,17 +276,23 @@ function App() {
                                 </div>
                                 <div className="description-container">
                                     <div className="point-list" />
-                                    <div className="description-field">Schreiben von Artikeln für den Blog der Organisation.</div>
+                                    <div className="description-field">Schreiben von Artikeln für den Blog der
+                                        Organisation.
+                                    </div>
                                 </div>
                                 <div className="description-container">
                                     <div className="point-list" />
-                                    <div className="description-field">Verfassung von Pressemitteilungen bezüglich der die von Unternehmen
-                                        organisierten Veranstaltungen</div>
+                                    <div className="description-field">Verfassung von Pressemitteilungen bezüglich der
+                                        die von Unternehmen
+                                        organisierten Veranstaltungen
+                                    </div>
                                 </div>
                                 <div className="description-container">
                                     <div className="point-list" />
-                                    <div className="description-field">Aufzeichnung der Personen, die sich für unternehmerische Kurse angemeldet
-                                        haben.</div>
+                                    <div className="description-field">Aufzeichnung der Personen, die sich für
+                                        unternehmerische Kurse angemeldet
+                                        haben.
+                                    </div>
                                 </div>
                                 <div className="description-container">
                                     <div className="point-list" />
@@ -284,7 +309,8 @@ function App() {
                             <div className="category-description">
                                 <div className="description-container">
                                     <div className="point-list" />
-                                    <div className="description-field">Lehrerin der akademischen Debatten im Rahmen des Projektes “Mit
+                                    <div className="description-field">Lehrerin der akademischen Debatten im Rahmen des
+                                        Projektes “Mit
                                         Jugendlichen entwickeln wir die Gesellschaft”
                                     </div>
                                 </div>
@@ -348,7 +374,9 @@ function App() {
                             <div className="category-description">
                                 <div className="description-container">
                                     <div className="point-list" />
-                                    <div className="description-field"> Online und offline Marketing (insbesondere Social Media Marketing Tätigkeiten)</div>
+                                    <div className="description-field"> Online und offline Marketing (insbesondere
+                                        Social Media Marketing Tätigkeiten)
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -360,6 +388,9 @@ function App() {
                     Download PDF
                 </div>
             </a>
+
+            <div className="changeColor" onClick={changeTheme}>
+            </div>
         </div>
     );
 }
