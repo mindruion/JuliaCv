@@ -1,3 +1,5 @@
 package-lock.json
 node_modules/
-Documentation/
+Docum\za    entation/
+.idea/
+build/
