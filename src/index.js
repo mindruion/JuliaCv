@@ -18,7 +18,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./assets/css/animate.min.css";
@@ -28,16 +28,43 @@ import "./assets/css/pe-icon-7-stroke.css";
 import App from './App';
 import AdminLayout from "layouts/Admin.jsx";
 
+// class Root extends React.Component {
+//     state = {
+//         loading: true
+//     };
+//
+//     componentDidMount() {
+//         // this simulates an async action, after which the component will render the content
+//         demoAsyncCall().then(() => this.setState({loading: false}));
+//     }
+//
+//     render() {
+//         const {loading} = this.state;
+//
+//         if (loading) { // if your component doesn't have to wait for async data, remove this block
+//             return null; // render null when app is not ready
+//         }
+//
+//         return (
+//             <div>I'm the app</div>
+//         );
+//     }
+// }
+//
+// function demoAsyncCall() {
+//     return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+// }
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-        <Route path="/">
-            <App />
-        </Route>App />
-      {/*<Redirect from="/" to="/admin/dashboard" />*/}
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById("root")
+    // <Root />,
+    <BrowserRouter>
+        <Switch>
+            <Route path="/admin" render={props => <AdminLayout {...props} />} />
+            <Route path="/">
+                <App />
+            </Route>
+            {/*<Redirect from="/" to="/admin/dashboard" />*/}
+        </Switch>
+    </BrowserRouter>,
+    document.getElementById("root")
 );
