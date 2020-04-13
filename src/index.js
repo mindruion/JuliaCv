@@ -28,38 +28,12 @@ import "./assets/css/pe-icon-7-stroke.css";
 import App from './App';
 import AdminLayout from "layouts/Admin.jsx";
 
-// class Root extends React.Component {
-//     state = {
-//         loading: true
-//     };
-//
-//     componentDidMount() {
-//         // this simulates an async action, after which the component will render the content
-//         demoAsyncCall().then(() => this.setState({loading: false}));
-//     }
-//
-//     render() {
-//         const {loading} = this.state;
-//
-//         if (loading) { // if your component doesn't have to wait for async data, remove this block
-//             return null; // render null when app is not ready
-//         }
-//
-//         return (
-//             <div>I'm the app</div>
-//         );
-//     }
-// }
-//
-// function demoAsyncCall() {
-//     return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-// }
 
 ReactDOM.render(
     // <Root />,
     <BrowserRouter>
         <Switch>
-            <Route path="/admin" render={props => <AdminLayout {...props} />} />
+            {/*<Route path="/login" component={login}/>*/}
             <Route path="/">
                 <App />
             </Route>
