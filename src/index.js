@@ -18,7 +18,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./assets/css/animate.min.css";
@@ -30,14 +30,15 @@ import AdminLayout from "layouts/Admin.jsx";
 
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-        <Route path="/">
-            <App />
-        </Route>App />
-      {/*<Redirect from="/" to="/admin/dashboard" />*/}
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById("root")
+    // <Root />,
+    <BrowserRouter>
+        <Switch>
+            {/*<Route path="/login" component={login}/>*/}
+            <Route path="/">
+                <App />
+            </Route>
+            {/*<Redirect from="/" to="/admin/dashboard" />*/}
+        </Switch>
+    </BrowserRouter>,
+    document.getElementById("root")
 );

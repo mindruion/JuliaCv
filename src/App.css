@@ -5,8 +5,68 @@
 }
 
 .App {
+    min-height: 100vh;
     padding: 2% 10%;
     font-family: Inconsolata;
+}
+
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*height: 80vh;*/
+    width: 11%;
+    /*margin-top: 10vh;*/
+    opacity: 0.9
+}
+
+#second-flower {
+    top: 30rem;
+}
+
+#third-flower {
+    top: 55rem;
+}
+
+#illustration {
+    animation: squigglevision 0.5s infinite alternate;
+}
+
+@keyframes squigglevision {
+    0% {
+        filter: url('#sketch-0');
+    }
+    25% {
+        filter: url('#sketch-1');
+    }
+    50% {
+        filter: url('#sketch-2');
+    }
+    75% {
+        filter: url('#sketch-3');
+    }
+    100% {
+        filter: url('#sketch-4');
+    }
+}
+
+.path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: paint 1s ease-in-out 1s forwards;
+}
+
+.path:nth-of-type(2) {
+    animation-delay: 2s;
+}
+
+@keyframes paint {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -61,6 +121,10 @@
     animation: none;
 }
 
+.changeColor {
+    /*display: none;*/
+}
+
 .pulse-button {
     animation: pulse 1.5s infinite;
     position: fixed;
@@ -74,7 +138,7 @@
     border: none;
     box-shadow: 0 0 0 0 #736c70;
     border-radius: 50%;
-    background-color: var(--color-surface);
+    background-image: linear-gradient(90deg, var(--color-surface), var(--color-solid));
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -201,7 +265,7 @@
 
 .cv-frame {
     border-radius: 20px;
-    padding: 20px 35px;
+    /*padding: 20px 35px;*/
     background-image: linear-gradient(+90deg, var(--color-surface), var(--color-solid));
     width: 100%;
 }
@@ -247,25 +311,25 @@
 
 @keyframes load {
     from {
-        width: 0%
+        width: 0
     }
 }
 
 @-webkit-keyframes load {
     from {
-        width: 0%
+        width: 0
     }
 }
 
 @-moz-keyframes load {
     from {
-        width: 0%
+        width: 0
     }
 }
 
 @-o-keyframes load {
     from {
-        width: 0%
+        width: 0
     }
 }
 
@@ -353,6 +417,16 @@
 
 
 @media screen and (max-width: 768px) {
+    .changeColor {
+        top: 4rem;
+        right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-image: linear-gradient(90deg, var(--color-surface), var(--color-solid));
+        position: fixed;
+        border-radius: 50%;
+    }
+
     .cv-frame {
         background-image: unset;
     }
@@ -371,6 +445,7 @@
         align-self: center;
         height: 100%;
     }
+
     .pulse-button {
         display: none;
     }
@@ -408,4 +483,5 @@
         padding-top: 5%;
         height: 100%;
     }
+
 }
